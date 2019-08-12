@@ -1,0 +1,20 @@
+NFC - Near Field Communication ( Online Fund Connecting System. .)
+
+
+-> Security Req
+-> 
+
+
+
+
+- Sign In
+- QR Code Generation( Create campaign )
+- Create Charity -> Roles - Volunteer
+			  - Campaigner
+			  - Collector
+	(Genrate QR Code on Shirts etc )
+- Donor donation
+- Payment Method -> Other data like REPEAT DONATION( AUTO DEBIT )
+		 -> 
+
+ntag213 chip

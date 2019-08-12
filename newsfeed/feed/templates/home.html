@@ -1,0 +1,63 @@
+{% load staticfiles %}
+{% load permission_tags %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- <link rel="stylesheet" href="/static/css/base.css" /> This is hardCoding -->
+      <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!--This is good practise -->
+      <script type="text/javascript" src="{% static "javascript/rango-jquery.js" %}"></script> 
+<head>
+ <!-- <link rel="stylesheet" href="/static/styles.css"> <!--YOU'LL THIS EFFECT AS BLUE BECAUSE WE HAVE MENTIONED ADDED A NEW FOLDER AND colors and applied css in it --> 
+</head>
+<div class="container-fluid">
+<body>
+<marquee><h2>Welcome Folks<h2></marquee>
+<div class="container-fluid">
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">MySite</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class='active'><a href="#">Home</a></li>
+      <li><a href="{% url 'searchposts' %}">My Feed</a></li>
+    </ul>
+  </div>
+</nav> 
+</h4>
+<div class="jumbotron">
+<h2>Hackers News</h2>
+<br>
+<table class="table table-bordered" style="width:100%" align="center" font size="50">
+ <tr>
+    <th>Posted By</th> 
+    <th>Title</th>
+	<th>Type</th>
+	<th>Score</th>
+	<th>Description</th>
+ </tr>
+ <tr>
+  {% for result in feeds %}
+    <td>{{ result.by }}</td>
+    <td>{{ result.title }}</td>
+	<td>{{ result.type }}</td>
+    <td>{{ result.score }}</td>
+    <td><a href = {{ result.url }}> {{ result.url }}</a> </td>
+  </tr>
+  {% endfor %}
+</table>
+<br><br>
+</div>
+  {% endblock %}
+</body>
+</div>
+</div>
+</html>
+
+
+

@@ -9,7 +9,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
      url(r'^$', feed_views.RendertoUI, name='RendertoUI'),
-	 url(r'RendertoUI/$', feed_views.searchposts, name='searchposts'),
+	 url(r'searchposts/$', feed_views.searchposts, name='searchposts'),
 	#url(r'^Newsinfo/$', feed_views.Newsinfo, name='Newsinfo'),
 	#url(r'^Call/$', feed_views.Call, name='call'),
 	#url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),

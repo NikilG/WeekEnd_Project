@@ -55,26 +55,27 @@ def Call(request):
 	return
 
 #view is used for rendering data to UI
-def RendertoUI(request):
-
-	list_feeds_id = LIST_FEEDS_ID
-	list_feeds_url = LIST_FEED_URL
-	try:
-		res = requests.get(list_feeds_id)
-		list_id = res.json()
-		for id in list_id:
-			res = requests.get(list_feeds_url.format(str(id)))
-			resjson = res.json()
-			print("feed->", resjson)
-	except Exception as e:
-			#LOG.error("Error is occurred in list of projects:%s"%e)
-		print("e", e)	
-		raise	
-	return render(request, 'home.html', {'feeds': resjson })
-
 #def RendertoUI(request):
-#	storing = Newsfeed.objects.all()
-#	return render(request, 'home.html', {'feeds': storing })
+#
+#	list_feeds_id = LIST_FEEDS_ID
+#	list_feeds_url = LIST_FEED_URL
+#	try:
+#		res = requests.get(list_feeds_id)
+#		list_id = res.json()
+#		for id in list_id:
+#			res = requests.get(list_feeds_url.format(str(id)))
+#			resjson = res.json()
+#			print("feed->", resjson)
+#	except Exception as e:
+#			#LOG.error("Error is occurred in list of projects:%s"%e)
+#		print("e", e)	
+#		raise	
+#	return render(request, 'home.html', {'feeds': resjson })
+
+#view is used for rendering data to UI
+def RendertoUI(request):
+	storing = Newsfeed.objects.all()
+	return render(request, 'home.html', {'feeds': storing })
 
 
 #view is used for searching a feed of user and proving Sentiment Analysis to that feed based on Title

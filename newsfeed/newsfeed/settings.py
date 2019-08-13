@@ -97,8 +97,14 @@ DATABASES = {
 }
 
 #Hacker News API's
+
 LIST_FEEDS_ID = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
 LIST_FEED_URL = 'https://hacker-news.firebaseio.com/v0/item/{}.json'
+
+#Aliyen API's and Key's
+
+APP_ID = 'f3af5401'
+ALIYEN_APP_KEY = '8cb33edba4435146e15485f7454f1fd1'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

@@ -7,11 +7,9 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <!-- <link rel="stylesheet" href="/static/css/base.css" /> This is hardCoding -->
       <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!--This is good practise -->
       <script type="text/javascript" src="{% static "javascript/rango-jquery.js" %}"></script> 
 <head>
- <!-- <link rel="stylesheet" href="/static/styles.css"> <!--YOU'LL THIS EFFECT AS BLUE BECAUSE WE HAVE MENTIONED ADDED A NEW FOLDER AND colors and applied css in it --> 
 </head>
 <div class="container-fluid">
 <body>
@@ -46,7 +44,7 @@ Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search
 {% if results %}
 <h4>Results for <b>{{ request.GET.q }}</b></h4>
 <br/><br/>
-<!-- -->
+
 <table class="table table-bordered" style="width:100%" align="center" font size="50">
  <tr>
     <th>Posted By</th> 
